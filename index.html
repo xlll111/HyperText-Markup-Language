@@ -8,11 +8,15 @@
     <title>HTML Presentation</title>
   </head>
 
-  <body class="background-one" id="myBody">
-    <div id="background"></div>
-
+  <body class="background0" id="myBody">
+    <!-- <div id="background"></div> -->
+    <div id="hz" style="width: 100%; height: 100%">
+      <h3 style="color: white; font-size: 3.5vw">正在缓存...</h3>
+      <div id="status"></div>
+      <button style="font-size: 2em" onclick="go()">>enter</button>
+    </div>
     <!-- Slide 1: Presentation Topic -->
-    <div class="slide active" id="slide1">
+    <div class="slide" id="slide1">
       <h1>HyperText Markup Language</h1>
       <p>Welcome to the presentation on the foundation of the web!</p>
     </div>
@@ -238,7 +242,7 @@
     </div>
 
     <script>
-      let currentSlide = 1;
+      let currentSlide = 0;
       const totalSlides = 12;
 
       function showSlide(slideIndex) {
@@ -304,6 +308,12 @@
         if (e.target.tagName.toLowerCase() === "a") {
           return;
         }
+        if (currentSlide === 0) {
+          return;
+        }
+        if (e.target.tagName.toLowerCase() === "buttom") {
+          return;
+        }
         const selection = window.getSelection().toString();
         if (!selection) {
           if (
@@ -318,12 +328,62 @@
       });
 
       window.addEventListener("wheel", (event) => {
-        if (event.deltaY > 0) {
-          nextSlide();
+        if (currentSlide === 0) {
+          return;
         } else {
-          prevSlide();
+          if (event.deltaY > 0) {
+            nextSlide();
+          } else {
+            prevSlide();
+          }
         }
       });
+
+      // 图片 URL 数组
+      const imagesToPreload = [
+        "https://s21.ax1x.com/2024/09/21/pAMtBVI.png",
+        "https://s21.ax1x.com/2024/09/21/pAMtwqA.png",
+        "https://www.hoyoverse.com/_nuxt/img/logo-light.3def3bc.png",
+      ];
+
+      function preloadImages(imageUrls) {
+        imageUrls.forEach((url) => {
+          const img = new Image();
+          img.src = url;
+          img.onload = () => {
+            updateStatus(`Image loaded : ${url}`);
+          };
+          img.onerror = () => {
+            updateStatus(`Failed to load image: ${url}`, true);
+          };
+        });
+      }
+
+      function updateStatus(message, error = false) {
+        const statusElement = document.getElementById("status");
+        const entry = document.createElement("p");
+        entry.textContent = message;
+        if (error) {
+          entry.style.color = "red";
+        } else {
+          entry.style.color = "green";
+        }
+        statusElement.appendChild(entry);
+      }
+
+      window.addEventListener("load", () => {
+        preloadImages(imagesToPreload);
+      });
+      function go() {
+        setTimeout(() => {
+          document.getElementById("hz").style.display = "none";
+          showSlide(1);
+          currentSlide = 1;
+          changeBackground();
+        }, 300);
+
+        // currentSlide++;
+      }
     </script>
   </body>
 </html>
