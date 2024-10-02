@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>HTML Presentation</title>
+    <link
+      rel="prefetch"
+      href="https://zenless.hoyoverse.com/en-us/"
+      as="document"
+    />
+    <link
+      rel="prefetch"
+      href="https://hsr.hoyoverse.com/en-us/"
+      as="document"
+    />
+    <link
+      rel="prefetch"
+      href="https://www.hoyoverse.com/en-us/"
+      as="document"
+    />
+    <link
+      rel="prefetch"
+      href="https://genshin.hoyoverse.com/en/"
+      as="document"
+    />
+  </head>
+
+  <body class="background0" id="myBody">
+    <!-- <div id="background"></div> -->
+    <div id="hz" style="width: 100%; height: 100%">
+      <h3 style="color: white; font-size: 3.5vw">正在缓存...</h3>
+      <div id="status"></div>
+      <button style="font-size: 2em" onclick="go()">>enter</button>
+    </div>
+    <!-- Slide 1: Presentation Topic -->
+    <div class="slide" id="slide1">
+      <h1>HyperText Markup Language</h1>
+      <p>Welcome to the presentation on the foundation of the web!</p>
+    </div>
+
+    <!-- Slide 2: Question and Answer -->
+    <div class="slide" id="slide2">
+      <h1>Is this a regular PPT?</h1>
+      <p id="answer" style="visibility: hidden; font-size: 4vw">
+        <span class="highlight" style="font-size: 8vw">No,</span> it's a web
+        page built with
+        <span class="highlight">HTML!</span>
+      </p>
+    </div>
+
+    <!-- Section Titles -->
+    <div class="slide" id="slide3">
+      <div class="title">What is HTML?</div>
+    </div>
+
+    <div class="slide slide2" id="slide4">
+      <h2 class="content-title">What is HTML?</h2>
+      <div class="content" style="display: flex; flex-direction: column">
+        <div class="flex">
+          <p class="mr3">•</p>
+          <p>
+            HTML stands for
+            <span class="highlight">HyperText Markup Language</span>.
+          </p>
+        </div>
+        <div class="flex">
+          <p class="mr3">•</p>
+          <p>
+            It structures the content of web pages, making it possible for
+            browsers to display text, images, and links.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- HTML Basics -->
+    <div class="slide" id="slide4.2">
+      <div class="title">HTML Basics</div>
+    </div>
+    <div class="slide slide2" id="slide4.5">
+      <h2 class="content-title">HTML Basics</h2>
+      <div class="content" style="display: flex; flex-direction: column">
+        <div
+          style="align-items: baseline; justify-content: space-between"
+          class="flex"
+        >
+          <div class="flex">
+            <p class="mr3">•</p>
+            <p>For headings, we use the '&lt;h1&gt;' to '&lt;h6&gt;' tags</p>
+          </div>
+          <div class="wid0">
+            <a
+              href="https://zenless.hoyoverse.com/en-us/"
+              target="_blank"
+              style="
+                display: block;
+                font-size: 3em;
+                margin-block-start: 0.67em;
+                margin-block-end: 0.4em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                font-weight: bold;
+                unicode-bidi: isolate;
+                text-decoration-line: none;
+                color: var(--link);
+              "
+            >
+              headings
+            </a>
+          </div>
+        </div>
+        <div
+          class="flex"
+          style="align-items: baseline; justify-content: space-between"
+        >
+          <div class="flex">
+            <p class="mr3">•</p>
+            <p>For paragraphs, we use `&lt;p&gt;`</p>
+          </div>
+          <div class="wid0">
+            <a
+              href="https://hsr.hoyoverse.com/en-us/"
+              target="_blank"
+              style="
+                color: rgb(30, 30, 30);
+                margin: 1.8em 0 0 0;
+                font-size: 2.5vw;
+              "
+              >paragraphs</a
+            >
+          </div>
+        </div>
+        <div
+          class="flex"
+          style="align-items: flex-end; justify-content: space-between"
+        >
+          <div class="flex">
+            <p class="mr3">•</p>
+            <p>to insert images, we use `&lt;img&gt;`</p>
+          </div>
+          <div class="wid0">
+            <!-- <p>a</p> -->
+            <a
+              href="https://www.hoyoverse.com/en-us/"
+              target="_blank"
+              style="
+                margin-top: 2em;
+                background-color: black;
+                width: 110%;
+                aspect-ratio: 644 /116;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-position: center;
+                background-image: url('https://www.hoyoverse.com/_nuxt/img/logo-light.3def3bc.png');
+              "
+            ></a>
+          </div>
+        </div>
+        <div
+          class="flex"
+          style="align-items: baseline; justify-content: space-between"
+        >
+          <div class="flex">
+            <p class="mr3">•</p>
+            <p>to add links, we use the `&lt;a&gt;` tag</p>
+          </div>
+          <div class="wid0">
+            <a
+              href="https://genshin.hoyoverse.com/en/"
+              target="_blank"
+              style="margin-top: 2.5em"
+            >
+              This is a link.</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="slide slide2" id="wrapper">
+      <h2 class="content-title">HTML Basics</h2>
+      <table class="dataintable">
+        <tbody>
+          <tr>
+            <th style="width: 33%">opening tag</th>
+            <th style="width: 33%">Element content</th>
+            <th>closing tag</th>
+          </tr>
+
+          <tr>
+            <td>&lt;p&gt;</td>
+            <td>This is a paragraph</td>
+            <td>&lt;/p&gt;</td>
+          </tr>
+
+          <tr>
+            <td>&lt;a href="example.com" &gt;</td>
+            <td>This is a link</td>
+            <td>&lt;/a&gt;</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="content" style="display: flex; flex-direction: column">
+        <div class="flex">
+          <p style="margin-top: 1.2vw" class="mr3">•</p>
+          <p style="margin-top: 1.2vw">HTML elements start with a start tag.</p>
+        </div>
+        <div class="flex">
+          <p class="mr3">•</p>
+          <p>The HTML element is terminated with an end tag.</p>
+        </div>
+        <div class="flex">
+          <p class="mr3">•</p>
+          <p>
+            The content of the element is between the start tag and the end tag.
+          </p>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- CSS vs No CSS Slide -->
+    <div class="slide" id="slide5">
+      <div class="title">CSS and HTML</div>
+    </div>
+
+    <div class="slide slide2" id="slide6">
+      <h2 class="content-title">CSS and HTML</h2>
+      <div
+        class="content"
+        style="display: flex; flex-direction: column; height: 100%"
+      >
+        <div style="flex: 2" class="flex">
+          <p class="mr3">•</p>
+          <p>
+            CSS, or Cascading Style Sheets, allows us to style the structure
+            that HTML creates.
+          </p>
+        </div>
+        <div style="flex: 2" class="flex">
+          <p class="mr3">•</p>
+          <p>Without CSS, webpages would be very plain, as shown below.</p>
+        </div>
+        <div style="display: flex; justify-content: center; gap: 50px; flex: 5">
+          <div class="box css">With CSS</div>
+          <div class="box" style="display: block"><div>Without CSS</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript vs No JavaScript Slide -->
+    <div class="slide" id="slide7">
+      <div class="title">JavaScript and HTML</div>
+    </div>
+
+    <div class="slide slide2" id="slide8">
+      <h2 class="content-title">JavaScript and HTML</h2>
+      <div
+        class="content"
+        style="display: flex; flex-direction: column; height: 100%"
+      >
+        <div style="flex: 2" class="flex">
+          <p class="mr3">•</p>
+          <p>
+            JavaScript allows us to add interactivity to web pages, making them
+            dynamic.
+          </p>
+        </div>
+        <div style="flex: 2" class="flex">
+          <p class="mr3">•</p>
+          <p>Hover over the left box to see JavaScript in action!</p>
+        </div>
+        <div style="display: flex; justify-content: center; gap: 50px; flex: 5">
+          <div class="box js">With JS</div>
+          <div class="box plain">Without JS</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Final Slide: Thank you for listening -->
+    <div class="slide" id="slide9">
+      <div class="title">Thank you for your listening!</div>
+    </div>
+
+    <script>
+      let currentSlide = 0;
+      const totalSlides = 11;
+
+      function showSlide(slideIndex) {
+        document.querySelectorAll(".slide").forEach((slide, index) => {
+          slide.classList.remove("active");
+          if (index === slideIndex - 1) {
+            slide.classList.add("active");
+          }
+          changeBackground();
+        });
+      }
+
+      function nextSlide() {
+        if (currentSlide < totalSlides) {
+          currentSlide++;
+          showSlide(currentSlide);
+        }
+      }
+
+      function prevSlide() {
+        if (currentSlide > 1) {
+          currentSlide--;
+          showSlide(currentSlide);
+        }
+      }
+
+      function revealAnswer() {
+        document.getElementById("answer").style.visibility = "visible";
+      }
+
+      function changeBackground() {
+        const bodyElement = document.getElementById("myBody");
+
+        if (currentSlide === 1) {
+          bodyElement.className = "background-one";
+        } else if (currentSlide === 2) {
+          bodyElement.className = "background-one";
+        } else if (currentSlide === 3) {
+          bodyElement.className = "background-one";
+        } else if (currentSlide === 4) {
+          bodyElement.className = "background-two";
+        } else if (currentSlide === 5) {
+          bodyElement.className = "background-one";
+        } else if (currentSlide === 6) {
+          bodyElement.className = "background-two";
+        } else if (currentSlide === 7) {
+          bodyElement.className = "background-one";
+        } else if (currentSlide === 8) {
+          bodyElement.className = "background-two";
+        } else if (currentSlide === 9) {
+          bodyElement.className = "background-one";
+        } else if (currentSlide === 10) {
+          bodyElement.className = "background-two";
+        } else if (currentSlide === 11) {
+          bodyElement.className = "background-one";
+        } else {
+          bodyElement.className = "";
+        }
+      }
+      document.body.addEventListener("click", (e) => {
+        if (e.target.tagName.toLowerCase() === "a") {
+          return;
+        }
+        if (currentSlide === 0) {
+          return;
+        }
+
+        const selection = window.getSelection().toString();
+        if (!selection) {
+          if (
+            currentSlide === 2 &&
+            document.getElementById("answer").style.visibility === "hidden"
+          ) {
+            revealAnswer();
+          } else {
+            nextSlide();
+          }
+        }
+      });
+
+      window.addEventListener("wheel", (event) => {
+        if (currentSlide === 0) {
+          return;
+        } else {
+          if (event.deltaY > 0) {
+            nextSlide();
+          } else {
+            prevSlide();
+          }
+        }
+      });
+
+      document.body.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          if (currentSlide === 0) {
+            go();
+            return;
+          }
+
+          if (
+            currentSlide === 2 &&
+            document.getElementById("answer").style.visibility === "hidden"
+          ) {
+            revealAnswer();
+          } else {
+            nextSlide();
+          }
+        }
+        if (event.key === " " || event.key === "ArrowRight") {
+          event.preventDefault();
+          if (currentSlide === 0) {
+            return;
+          }
+
+          if (
+            currentSlide === 2 &&
+            document.getElementById("answer").style.visibility === "hidden"
+          ) {
+            revealAnswer();
+          } else {
+            nextSlide();
+          }
+        }
+        if (event.key === "ArrowLeft") {
+          prevSlide();
+        }
+      });
+
+      const imagesToPreload = [
+        "https://s21.ax1x.com/2024/09/21/pAMtBVI.png",
+        "https://s21.ax1x.com/2024/09/21/pAMtwqA.png",
+        "https://www.hoyoverse.com/_nuxt/img/logo-light.3def3bc.png",
+      ];
+
+      function preloadImages(imageUrls) {
+        let totalImages = imageUrls.length;
+        let loadedImages = 0;
+
+        const statusElement = document.getElementById("status");
+
+        imageUrls.forEach((url) => {
+          const img = new Image();
+
+          const entry = document.createElement("p");
+          entry.textContent = `Caching: ${url}`;
+          entry.style.color = "white";
+          statusElement.appendChild(entry);
+
+          img.src = url;
+          img.onload = () => {
+            loadedImages++;
+            entry.textContent = `Cache completed: ${url}`;
+            entry.style.color = "green";
+
+            if (loadedImages === totalImages) {
+              updateStatus("All images cached.", "white");
+            }
+          };
+          img.onerror = () => {
+            entry.textContent = `Failed to cache image: ${url}`;
+            entry.style.color = "red";
+          };
+        });
+      }
+
+      function updateStatus(message, color = "green") {
+        const statusElement = document.getElementById("status");
+        const entry = document.createElement("p");
+        entry.textContent = message;
+        entry.style.color = color;
+        statusElement.appendChild(entry);
+      }
+
+      window.addEventListener("load", () => {
+        preloadImages(imagesToPreload);
+      });
+      function go() {
+        setTimeout(() => {
+          document.getElementById("hz").style.display = "none";
+          showSlide(1);
+          currentSlide = 1;
+          changeBackground();
+        }, 300);
+      }
+    </script>
+  </body>
+</html>
